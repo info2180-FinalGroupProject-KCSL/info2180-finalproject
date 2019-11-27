@@ -58,7 +58,7 @@ window.onload =  function (){
     
     function sucessfulLogin(checking){
         if (response == "Login was successful"){
-            window.location.assign(dasboard.html);
+            $("login").load("issue.html")
         }
     }
     
