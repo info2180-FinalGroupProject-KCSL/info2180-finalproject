@@ -62,10 +62,6 @@ window.onload =  function (){
         }
     }
     
-    function logoutUser(){
-        
-    }
-    
     function forward(){
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if (httpRequest.status === 200) {
