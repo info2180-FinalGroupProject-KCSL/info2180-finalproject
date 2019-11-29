@@ -30,7 +30,7 @@
                                     <label for="psw"><b>Password</b></label><br>
                                     <input type="password" placeholder="password..." name="psw" class="psw" required><br><br>
             
-                                    <button type="submit" id="submit"> Submit </button>
+                                    <button type="submit" id="loginsubmit"> Submit </button>
                                     
                                 </form>
                             </div>
@@ -79,7 +79,7 @@
                                     <label for="email"><b>E-mail</b></label><br>
                                     <p></p><input type="text" placeholder="Enter E-mail" name="email" class="email" required></p><br><br>
                                         
-                                    <button type="submit" id="submit"> Submit </button>
+                                    <button type="submit" id="newusersubmit"> Submit </button>
                                     
                                 </form>
                             </div>
@@ -111,15 +111,15 @@
                         <section class="main">
                             <header class="heading">
                                 <h2>Issues</h2><br><br>  
-                                <button class="create">Create New Issue</button>              
+                                <button class="create" id="create">Create New Issue</button>              
                             </header>
                                 
                             <div class="content">
                                 <form class=" " method="post">
                                     <label class="filter">Filter by: </label>
-                                    <button class="all">ALL</button>
-                                    <button class="open">OPEN</button>
-                                    <button class="tickets">MY TICKETS</button>
+                                    <button class="all" id="issueall">ALL</button>
+                                    <button class="open" id="issueopen">OPEN</button>
+                                    <button class="tickets" id="issuetickets">MY TICKETS</button>
                                     <table>
                                         <thead>
                                                 <td>Title</td>
@@ -181,8 +181,8 @@
                                 <label>Priority:</label>
                                 <label>Status:</label>
 
-                                <button>Mark as Closed</button>
-                                <button>Mark In Progress</button>
+                                <button id="markclosed">Mark as Closed</button>
+                                <button id="markprogress">Mark In Progress</button>
                             </div>
                         </section>
                     </section>
