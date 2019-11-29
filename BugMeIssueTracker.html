@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Final Project</title>
+        <link rel="stylesheet" type="text/css" href="basic_outline.css">
+        <script type="text/javascript" src="issueDashboard.js"></script>
+        <script type="text/javascript" src="newuserPage.js"></script>    
+    </head>
+    <body>
+        <div class="login" id="login">
+                <header class="main-header">
+                        <div class="main-header-content">
+                            <img src="" class="bugimg">
+                            <h1>BugMe Issue Tracker</h1><br>
+                        </div>
+                    </header>
+            
+                    <section class="container">
+                        
+                        <section class="main">
+                            <header class="heading">
+                                <h2> Login </h2><br><br>
+                            </header>
+                                
+                            <div class="content">
+                                <form class=" " method="post">
+            
+                                    <label for="uname"><b>Email</b></label><br>
+                                    <input type="text" placeholder="email..." name="email" class="email" required><br><br>
+                
+                                    <label for="psw"><b>Password</b></label><br>
+                                    <input type="password" placeholder="password..." name="psw" class="psw" required><br><br>
+            
+                                    <button type="submit" id="submit"> Submit </button>
+                                    
+                                </form>
+                            </div>
+                        </section>
+                    </section>
+        </div>
+        <div class="newuser" id="newuser">
+                <header class="main-header">
+                        <div class="main-header-content">
+                            <img src="" class="bugimg">
+                            <h1>BugMe Issue Tracker</h1><br>
+                        </div>
+                    </header>
+            
+                    <section class="container">
+                        <div class="side-bar">
+                            <nav class="menu">
+                                <li><a href="issues.html"><i class=""></i></a>Home</a></li><br>
+                        
+                                <li><a href="newuser.html"><i class=""></i></a>Add User</a></li><br>
+                            
+                                <li><a href="createissue.html"><i class=""></i></a>New Issue</a></li><br>
+                            
+                                <li><a href="login.html"><i class=""></i></a>Logout</a></li>
+                            </nav>
+                        </div>
+                        
+                        <!-- main content of the page -->
+                        <section class="main">
+                            <header class="heading">
+                                <h2></h2><br><br>
+                            </header>
+                                
+                            <div class="content">
+                                <form id="form">
+                    
+                                    <label for="fname"><b>Firstname</b></label><br>
+                                    <p></p><input type="text" placeholder="Enter first name" name="fname" class="fname" required></p><br><br>
+                
+                                    <label for="lname"><b>Lastname</b></label><br>
+                                    <p></p><input type="text" placeholder="Enter last name" name="lname" class="lname" required></p><br><br>
+                
+                                    <label for="psw"><b>Password</b></label><br>
+                                    <p><input type="password" placeholder="Enter password" name="psw" class="psw" required></p><br><br>
+                
+                                    <label for="email"><b>E-mail</b></label><br>
+                                    <p></p><input type="text" placeholder="Enter E-mail" name="email" class="email" required></p><br><br>
+                                        
+                                    <button type="submit" id="submit"> Submit </button>
+                                    
+                                </form>
+                            </div>
+                        </section>
+                    </section>
+        </div>
+        <div class="issues" id="issues">
+                <header class="main-header">
+                        <div class="main-header-content">
+                            <img src="" class="bugimg">
+                            <h1>BugMe Issue Tracker</h1><br>
+                        </div>
+                    </header>
+            
+                    <section class="container">
+                        <div class="side-bar">
+                            <nav class="menu">
+                                <li><a href="issues.html"><i class=""></i></a>Home</a></li><br>
+                        
+                                <li><a href="newuser.html"><i class=""></i></a>Add User</a></li><br>
+                            
+                                <li><a href="createissue.html"><i class=""></i></a>New Issue</a></li><br>
+                            
+                                <li><a href="login.html"><i class=""></i></a>Logout</a></li>
+                            </nav>
+                        </div>
+                        
+                        <!-- main content of the page -->
+                        <section class="main">
+                            <header class="heading">
+                                <h2>Issues</h2><br><br>  
+                                <button class="create">Create New Issue</button>              
+                            </header>
+                                
+                            <div class="content">
+                                <form class=" " method="post">
+                                    <label class="filter">Filter by: </label>
+                                    <button class="all">ALL</button>
+                                    <button class="open">OPEN</button>
+                                    <button class="tickets">MY TICKETS</button>
+                                    <table>
+                                        <thead>
+                                                <td>Title</td>
+                                                <td>Type</td>
+                                                <td>Status</td>
+                                                <td>Assigned To</td>
+                                                <td>Created</td>
+                                        </thead>
+                                    </table>
+                                    
+                                </form>
+                            </div>
+                        </section>
+                    </section>
+        </div>
+        <div class="xss_vulnerability" id="xss_vulnerability">
+                <header class="main-header">
+                        <div class="main-header-content">
+                            <img src="" class="bugimg">
+                            <h1>BugMe Issue Tracker</h1><br>
+                        </div>
+                    </header>
+            
+                    <section class="container">
+                        <div class="side-bar">
+                            <nav class="menu">
+                                <li><a href="issues.html"><i class=""></i></a>Home</a></li><br>
+                        
+                                <li><a href="newuser.html"><i class=""></i></a>Add User</a></li><br>
+                            
+                                <li><a href="createissue.html"><i class=""></i></a>New Issue</a></li><br>
+                            
+                                <li><a href="login.html"><i class=""></i></a>Logout</a></li>
+                            </nav>
+                        </div>
+                        
+                        <!-- main content of the page -->
+                        <section class="main">
+                            <header class="heading">
+                                <h2> XSS Vulnerablity in Add User Form</h2>
+                                <h6>Issue #100</h6>
+                            </header>
+                                
+                            <div class="content">
+                                <form class=" " method="post">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis tenetur quia animi voluptatum ipsum necessitatibus 
+                                        delectus dolores accusamus, minima repellat minus sequi non reiciendis debitis eveniet fugiat consectetur ullam
+                                        pariatur nesciunt ea laborum quidem optio! Quos natus animi beatae qui voluptate ex ipsa odio quidem aperiam neque
+                                        inventore voluptatem amet adipisci voluptas omnis dignissimos cupiditate eos, reprehenderit in sunt et? Officiis 
+                                        nobis temporibus iusto blanditiis esse consequatur, rerum perferendis consequuntur et. Dicta minus in ipsam suscipit, 
+                                        dolores, assumenda cumque perferendis neque tenetur voluptatem sed cupiditate corrupti laborum ea dolore veniam adipisci,
+                                        nesciunt perspiciatis dolorem esse deserunt doloremque! Aspernatur, nesciunt minima.</p>
+                                    
+                                </form>
+                            </div>
+                            <div class="secondbar">
+                                <label>Assigned To</label>
+                                <label>Type:</label>
+                                <label>Priority:</label>
+                                <label>Status:</label>
+
+                                <button>Mark as Closed</button>
+                                <button>Mark In Progress</button>
+                            </div>
+                        </section>
+                    </section>
+        </div>
+        
+        <div class="createissue" id="createissue">
+                <header class="main-header">
+                    <div class="main-header-content">
+                        <img src="" class="bugimg">
+                        <h1>BugMe Issue Tracker</h1><br>
+                    </div>
+                </header>
+
+                <section class="container">
+                    <div class="side-bar">
+                        <nav class="menu">
+                            <li><a href="issues.html"><i class=""></i></a>Home</a></li><br>
+                    
+                            <li><a href="newuser.html"><i class=""></i></a>Add User</a></li><br>
+                        
+                            <li><a href="createissue.html"><i class=""></i></a>New Issue</a></li><br>
+                        
+                            <li><a href="login.html"><i class=""></i></a>Logout</a></li>
+                        </nav>
+                    </div>
+                    
+                    <!-- main content of the page -->
+                    <section class="main">
+                        <header class="heading">
+                            <h2></h2><br><br>
+                        </header>
+                            
+                        <div class="content">
+                            <form class=" " method="post">
+
+                                    <label for="title"><b>Title</b></label><br>
+                                    <input type="text" placeholder="type here..." name="title" class="title" required><br><br>
+                
+                                    <label for="desc"><b> Description </b></label><br>
+                                    <input type="text" placeholder="type here..." name="desc" class="desc" required><br><br>
+                
+                                    <label for="assign"><b> Assigned To </b></label><br>
+                                    <input type="text" placeholder="type here..." name="assign" class="assign" required><br><br>
+
+                                    <label for="type"><b> Type </b></label><br>
+                                    <input type="text" placeholder="type here..." name="type" class="type" required><br><br>
+
+                                    <label for="priority"><b> Priority </b></label><br>
+                                    <input type="text" placeholder="type here..." name="priority" class="priority" required><br><br>
+                            </form>
+                        </div>
+                    </section>
+                </section>
+        </div>
+    </body>
+</html>
