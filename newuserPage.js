@@ -11,6 +11,11 @@ var newIssueBtn;
 var logoutBtn;
 var loginString;
 var response;
+var newuserDiv;
+var issuesDiv;
+var xssDiv;
+var createissueDiv;
+var loginDiv;
 var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 var passRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
 
@@ -20,7 +25,17 @@ window.onload =  function (){
     loginBtn = document.getElementById("submit");
     loginBtn.addEventListener("click", checkfield);
     logoutBtn = document.getElementById("logout");
-    logoutBtn.addEventListener("click", logoutUser);
+    //logoutBtn.addEventListener("click", logoutUser);
+    newuserDiv = document.getElementById("newuser");
+    loginDiv = document.getElementById("login");
+    issuesDiv = document.getElementById("issues");
+    createissueDiv = document.getElementById("createissue");
+    xssDiv = document.getElementById("xss_vulnerability");
+    showDiv(newuserDiv);
+    hideDiv(loginDiv);
+    hideDiv(issuesDiv);
+    hideDiv(createissueDiv);
+    hideDiv(xssDiv);
     
     function checkfield(event){
         firstName = document.getElementById("form").elements["fname"].value.trim();
@@ -72,4 +87,12 @@ window.onload =  function (){
             }
         }
     }
+}
+
+function hideDiv(divname){
+  divname.style.display ='none';
+}
+
+function showDiv(divname){
+  divname.style.display ='block';
 }
