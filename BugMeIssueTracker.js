@@ -46,13 +46,13 @@ window.onload =  function (){
 
     
     issueAllBtn = document.getElementById("issueall");
-    issueAllBtn.addEventListener("click", issuePage);
+    issueAllBtn.addEventListener("click", issueAllPage);
 
     issueOpenBtn = document.getElementById("issueopen");
-    issueOpenBtn.addEventListener("click", issuePage);
+    issueOpenBtn.addEventListener("click", issueOpenPage);
     
     issueTicketsBtn = document.getElementById("issuetickets");
-    issueTicketsBtn.addEventListener("click", issuePage);
+    issueTicketsBtn.addEventListener("click", issueTicketsPage);
     
     createBtn = document.getElementById("create");
     createBtn.addEventListener("click", createIssuePage);
@@ -72,53 +72,11 @@ window.onload =  function (){
     createissueDiv = document.getElementById("createissue");
     xssDiv = document.getElementById("xss_vulnerability");
     
-    
-    
     hideDiv(newuserDiv);
     showDiv(loginDiv);
     hideDiv(issuesDiv);
     hideDiv(createissueDiv);
     hideDiv(xssDiv);
-    
-    function checkfield(event){
-        firstName = document.getElementById("form").elements["fname"].value.trim();
-        lastName = document.getElementById("form").elements["lname"].value.trim();
-        passWord = document.getElementById("form").elements["psw"].value.trim();
-        eMail = document.getElementById("form").elements["email"].value.trim();
-        if (!firstName){
-            alert("Please enter First Name");
-        }
-        if(!lastName){
-            alert("Please enter Last Name");
-        }
-        if (!(passRegex.test(passWord))){
-            alert("Password must contain at least one number and one letter, and one capital letter and are at least 8 characters long");
-        }
-        if (!(emailRegex.test(eMail))){
-            alert("E-Mail must be in the format email@example.com");
-        }
-        if(firstName && lastName && (passRegex.test(passWord)) && (emailRegex.test(eMail))){
-            loginUser(firstName,lastName,passWord,eMail)
-        }
-    }
-    
-    function loginUser(firstName,lastName,passWord,eMail){
-        event.preventDefault();
-        loginString += "?firstname=" + firstName;
-        loginString += "?lastName=" + lastName;
-        loginString +="?password="+  passWord;
-        loginString += "?email=" + eMail;
-        
-        httpRequest.onreadystatechange = forward;
-        httpRequest.open('POST');
-        httpRequest.send(loginString);
-    }
-    
-    function sucessfulLogin(checking){
-        if (response == "Login was successful"){
-            $("login").load("issue.html")
-        }
-    }
     
     function forward(){
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
@@ -132,11 +90,12 @@ window.onload =  function (){
     }
 }
 
-function newUserPage(){
-    
-}
-
 function loginPage(){
+    hideDiv(newuserDiv);
+    hideDiv(loginDiv);
+    showDiv(issuesDiv);
+    hideDiv(createissueDiv);
+    hideDiv(xssDiv);
     
 }
 
@@ -144,12 +103,43 @@ function logoutPage(){
     
 }
 
-function issuePage(){
+function issueAllPage(){
+    hideDiv(newuserDiv);
+    hideDiv(loginDiv);
+    showDiv(issuesDiv);
+    hideDiv(createissueDiv);
+    hideDiv(xssDiv);
+    
+}
+
+function issueOpenPage(){
+    hideDiv(newuserDiv);
+    hideDiv(loginDiv);
+    showDiv(issuesDiv);
+    hideDiv(createissueDiv);
+    hideDiv(xssDiv);
+    
+}
+
+function issueTicketsPage(){
+    hideDiv(newuserDiv);
+    hideDiv(loginDiv);
+    showDiv(issuesDiv);
+    hideDiv(createissueDiv);
+    hideDiv(xssDiv);
+    
+}
+
+function newUserPage(){
     
 }
 
 function createIssuePage(){
-    
+    hideDiv(newuserDiv);
+    hideDiv(loginDiv);
+    hideDiv(issuesDiv);
+    showDiv(createissueDiv);
+    hideDiv(xssDiv);
 }
 
 function xssPage(){
@@ -162,4 +152,44 @@ function hideDiv(divname){
 
 function showDiv(divname){
   divname.style.display ='block';
+}
+
+function checkfield(event){
+    firstName = document.getElementById("form").elements["fname"].value.trim();
+    lastName = document.getElementById("form").elements["lname"].value.trim();
+    passWord = document.getElementById("form").elements["psw"].value.trim();
+    eMail = document.getElementById("form").elements["email"].value.trim();
+    if (!firstName){
+        alert("Please enter First Name");
+    }
+    if(!lastName){
+        alert("Please enter Last Name");
+    }
+    if (!(passRegex.test(passWord))){
+        alert("Password must contain at least one number and one letter, and one capital letter and are at least 8 characters long");
+    }
+    if (!(emailRegex.test(eMail))){
+        alert("E-Mail must be in the format email@example.com");
+    }
+    if(firstName && lastName && (passRegex.test(passWord)) && (emailRegex.test(eMail))){
+        loginUser(firstName,lastName,passWord,eMail)
+    }
+}
+    
+function loginUser(firstName,lastName,passWord,eMail){
+    event.preventDefault();
+    loginString += "?firstname=" + firstName;
+    loginString += "?lastName=" + lastName;
+    loginString +="?password="+  passWord;
+    loginString += "?email=" + eMail;
+        
+    httpRequest.onreadystatechange = forward;
+    httpRequest.open('POST');
+    httpRequest.send(loginString);
+}
+    
+function sucessfulLogin(checking){
+    if (response == "Login was successful"){
+        $("login").load("issue.html")
+    }
 }
