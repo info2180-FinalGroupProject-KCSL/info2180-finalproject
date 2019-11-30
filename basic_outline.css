@@ -1,92 +1,188 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    font: 12px 'Open Sans', sans-serif;
-    color: #212121;
-    background: #eeeeee;
-    overflow-x: hidden;
-}
-
-html, body {
-    height: 100%;
-}
-
-.main-header {
-    background: #000000;
-    padding: 10px;
-    box-shadow: 1px 2px 3px #ccc;
-    color: white;
-    display: flex;
-    flex-flow: row nowrap;
-}
-
-.main-header-content {
-    flex: 1 0 auto;
-}
-
-.container {
-    display: table;
-	width: 100%;
-	height: 100%;
-}
-
-.side-bar {
-    display: table-cell;
-	width: 15%;
-	vertical-align: top;
-    position: absolute;
-    background: #e4e6e9;
-    color: rgb(241, 239, 239);
-    left: 0;
-    height: 100%;
-}
-
-.menu li a {
-    color: rgb(136, 136, 136);
-    border: 3px solid #fff;
+.main-header{
+    color: black;
     text-align: center;
-    font-size: 18px;
-    font-weight: 500;
-    display: block;
-    text-decoration: none;
-    padding: 5px 0px 5px 0;
-    margin: 0 20px;
-}
+    font-family: 'Yantramanav', sans-serif;
+    height: 200px;
+    background-color: black
 
-.main{
-    padding-top: 20px;
-    padding-left: 20px;
-    display: table-cell;
-	width: 85%;
-	vertical-align: top;
 }
+.main-header-content{
+    border: 3px solid red;
+    background-color:white; 
+    position: relative;
+    line-height: 80%;
+    width: 500px;
+    height: 80px;
+    top: 50px;
+    margin: 0 auto;
 
+}
+.grid-container-full-page{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  padding: 5px;
+  width: 100%x;
+
+}
+.main-content{
+margin-left: 20px;
+}
 h2{
+    font-family: 'Raleway', sans-serif;
     font-size: 30px;
 }
+.header-table-page{
+  display: grid;
+  grid-template-columns: 60% auto;
 
-label{
-    font-size: 20px;
+}
+.filterheader{
+  display: grid;
+  grid-template-columns: 60% auto;
+
+
 }
 
-input{
-    border: 2px solid red;
-    border-radius: 4px;
+.input{
+    border: solid red 1px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
     width: 50%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+    padding: 10px;
 }
-#submit{
-    background-color: red;
-    border: none;
+
+.inputlogin{
+    border: solid red 1px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.inputselect{
+    border: solid red 1px;
+    background-color: #f6f6f6;
+    border-radius: 5px;
+    width: 50%;
+    padding: 10px;
+}
+.adduserform ul{
+    list-style-type: none;
+}
+.tablebtn{
     color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+    background-color: black;
+}
+
+.subbutton{
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    width: 20%x
+    padding: 6px;
+    background-color: red;
+    color: white;
+    font-family: "Calibri";
+    margin: auto;
+}
+.navbtn{ 
+   margin-bottom: 12px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+    width: 20%x;
+    background-color: red;
+    color: white;
+    font-family: "Calibri";
+}
+.main-content ul{
+    list-style-type: none;
+    margin-left: -22px;
+}
+.main-content li{
+    font-family: "Calibri";
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+
+}
+.loginform ul{
+    list-style-type: none;
+    margin-bottom: 20px;
+}
+.menu ul{
+    list-style-type: none;
+    font-size: 12px;
+    color: white;
+    margin: auto;
+    padding-bottom: 12px;
+
+}
+.Open{ 
+    background-color: grey;
+    color :white;
+    padding: -5px;
+    border-radius: 200px;
+    border: none;}
+.Closed{ 
+    background-color: grey;
+    color :white;}
+.In .Progress{
+    background-color: grey;
+    color :white;
+}
+
+.menu{
+    background-color: #B4B4B4;
+    margin-left: -5px;
+}
+
+table.table1 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: 2px solid #000000;
+  background-color: #B4B4B4;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.table1 td, table.table1 th {
+  border: 1px solid #3D3D3D;
+  padding: 3px 2px;
+}
+table.table1 tbody td {
+  font-size: 13px;
+  color: #000000;
+}
+table.table1 tr:nth-child(even) {
+  background: #C1C1C1;
+}
+table.table1 thead {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+table.table1 thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.table1 thead th:first-child {
+  border-left: none;
+}
+
+table.table1 tfoot {
+  font-size: 12px;
+  font-weight: bold;
+  color: #E6E6E6;
+  background: #000000;
+  background: -moz-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  background: -webkit-linear-gradient(top, #404040 0%, #191919 66%, #000000 100%);
+  background: linear-gradient(to bottom, #404040 0%, #191919 66%, #000000 100%);
+  border-top: 1px solid #393939;
+}
+table.table1 tfoot td {
+  font-size: 12px;
 }
